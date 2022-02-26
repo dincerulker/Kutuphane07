@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kutuphane07.DATA;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,52 @@ namespace Kutuphane07.UI
 {
     public partial class LoginForm : Form
     {
+        KullaniciYoneticisi kullaniciYoneticisi;
         public LoginForm()
         {
             InitializeComponent();
+            kullaniciYoneticisi = new KullaniciYoneticisi();
+        }
+
+        private void btnGirisYap_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtKullaniciAdi.Text) && !string.IsNullOrEmpty(txtParola.Text))
+            {
+                Kullanici girisYapanKullanici = kullaniciYoneticisi.GirisYap(txtKullaniciAdi.Text, txtParola.Text); // burada yeni kullanci oluşturup..
+                if (girisYapanKullanici != null)
+                {
+                    KutuphaneForm kutuphaneForm = new KutuphaneForm(girisYapanKullanici); // ..burada kutuphane forma
+                                                                                          // gönderiyoruz
+                    kutuphaneForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Kullanıcı adı yada parola hatalı!.");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Lütfen kullanıcı adı yada parolanızı giriniz!");
+            }
+
+        }
+
+        private void lnklblKayitOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm(kullaniciYoneticisi); // yeni oluşturduğumuz
+                                                                               // kullaniciYoneticisini gönderiyoruz
+            registerForm.ShowDialog();
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Json kaydetme
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            // Json okuma
         }
     }
 }

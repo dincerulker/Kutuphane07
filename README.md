@@ -5,7 +5,7 @@
     - Ad string
     - BasýmTarihi DateTime
     - KitapTurEnum KitapTuru
-    - YazarAr string
+    - YazarAd string
     - SayfaSayisi int
     - Aciklama string
   - KitapTurEnum
@@ -31,4 +31,6 @@
   - Register sayfasýnda parola eþleþme kontrolü
   - Ayný kullanýcý adýna sahip kiþi var mý?
   - Register ve Login iþlemleri metotlar kullanýlarak 
+  - Login baþarýlýysa Kutuphane.Form açýlsýn
+  - Login form açýlýrken ve kapanýrken KullaniciYoneticisini serialize ve deserialize ediniz
 

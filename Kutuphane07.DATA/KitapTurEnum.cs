@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Kutuphane07.DATA
 {
-    class KitapTurEnum
+    public enum KitapTurEnum
     {
+        Korku,Psikoloji,Biyografi,Tarih,Siyaset,Fantastik,Bilim
     }
 }
