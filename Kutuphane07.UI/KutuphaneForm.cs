@@ -25,7 +25,7 @@ namespace Kutuphane07.UI
         {
             if (e.Button == MouseButtons.Right)
             {
-                contextMenuStrip1.Show(this,new Point(e.X,e.Y);
+                contextMenuStrip1.Show(this,new Point(e.X,e.Y));
             }
         }
     }
