@@ -1,9 +1,11 @@
 ﻿using Kutuphane07.DATA;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +18,7 @@ namespace Kutuphane07.UI
         KullaniciYoneticisi kullaniciYoneticisi;
         public LoginForm()
         {
+            
             InitializeComponent();
             kullaniciYoneticisi = new KullaniciYoneticisi();
         }
@@ -53,12 +56,26 @@ namespace Kutuphane07.UI
 
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Json kaydetme
+            VerileriKaydet();
+        }
+
+        private void VerileriKaydet()
+        {
+            string json = JsonConvert.SerializeObject(kullaniciYoneticisi);
+            File.WriteAllText("veri.json", json);
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            // Json okuma
+            try
+            {
+                string json = File.ReadAllText("veri.json");
+                kullaniciYoneticisi = JsonConvert.DeserializeObject<KullaniciYoneticisi>(json);
+            }
+            catch (Exception)
+            {
+                kullaniciYoneticisi = new KullaniciYoneticisi();
+            }
         }
     }
 }
