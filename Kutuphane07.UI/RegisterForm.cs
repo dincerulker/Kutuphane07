@@ -14,12 +14,17 @@ namespace Kutuphane07.UI
     public partial class RegisterForm : Form
     {
         private readonly KullaniciYoneticisi kullaniciYoneticisi;
+        private readonly Kullanici kullanici;
 
         public RegisterForm(KullaniciYoneticisi kullaniciYoneticisi)
         {
             InitializeComponent();
             this.kullaniciYoneticisi = kullaniciYoneticisi;
         }
+        
+
+        
+        
 
         private void txtKullaniciAdi_TextChanged(object sender, EventArgs e)
         {
@@ -108,6 +113,20 @@ namespace Kutuphane07.UI
                 btnKayitOl.Enabled = false;
             }
 
+        }
+
+        private void btnKayitOl_Click(object sender, EventArgs e)
+        {
+            bool basariliMi = kullaniciYoneticisi.KayitOl(txtAdSoyad.Text, txtKullaniciAdi.Text, txtParola.Text, txtParolaTekrar.Text);
+            if (basariliMi)
+            {
+                MessageBox.Show("Başarıyla kaydoldunuz");
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Kayıt işleminiz başarısız. Lütfen bilgilerinizi kontrol ediniz.");
+            }
         }
     }
 }

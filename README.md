@@ -26,7 +26,7 @@
         - KitapBagisYap methodu
         - KitapImhaEt methodu
         - KitapOduncAl methodu parametre kullanýcý ve kitap
-- [ ] Register ve Login sayfalarýnýn tasarlanmasý
+- [X] Register ve Login sayfalarýnýn tasarlanmasý
     - Görsel tasarýmýn yapýlmasý.
     - Register sayfasýnda parola eþleþme kontrolü
     - Ayný kullanýcý adýna sahip kiþi var mý kontrolü
@@ -37,6 +37,11 @@
     - KutuphaneForm açýlýr ve kapanýrken kutuphaneyoneticisi serialize ve deserialize edilir.
     - Kutuphaneform'da menustripdeki butonlara týklandýðýnda ilgili formlarýn açýlmasý.
     - Çýkýþ yap özelliði 
+    - Context menu strip kullanýlarak kitap imha et ve kitap ödünç al özelliklerinin eklenmesi
+    - txt arama ve combobox turlerdeki seçim ve text deðiþtiðinde datagridviewde ilgili kitaplarýn listelenmesi.
 - [ ] HesabýmForm
     - HesabýmSayfasýnda giriþ yapan kullanýcý bilgileri gösterilir.
 - [ ] BagisYap Form
+    - BagisYap fromda ilgili kitap bilgileri alýnarak bir kitap kutuphanedeki kitaplara eklenir.
+- [ ] Çýkýþ Yap butonu
+    - Kutuphane formu kapatarak loginforma geri döner ve baþka bir kullanýcý ile giriþ yapma imkaný saðlar.

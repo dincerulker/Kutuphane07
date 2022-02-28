@@ -30,26 +30,26 @@ namespace Kutuphane07.UI
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblParola = new System.Windows.Forms.Label();
+            this.lblKullaniciAdi = new System.Windows.Forms.Label();
+            this.lblAdSoyad = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvKitaplar = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTeslimEt = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKitaplar)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblParola);
+            this.groupBox1.Controls.Add(this.lblKullaniciAdi);
+            this.groupBox1.Controls.Add(this.lblAdSoyad);
+            this.groupBox1.Controls.Add(this.lblId);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(331, 218);
@@ -57,45 +57,45 @@ namespace Kutuphane07.UI
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kullanıcı Bilgileri";
             // 
-            // label1
+            // lblParola
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID:";
+            this.lblParola.AutoSize = true;
+            this.lblParola.Location = new System.Drawing.Point(6, 161);
+            this.lblParola.Name = "lblParola";
+            this.lblParola.Size = new System.Drawing.Size(40, 13);
+            this.lblParola.TabIndex = 0;
+            this.lblParola.Text = "Parola:";
             // 
-            // label2
+            // lblKullaniciAdi
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Ad Soyad:";
+            this.lblKullaniciAdi.AutoSize = true;
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(6, 116);
+            this.lblKullaniciAdi.Name = "lblKullaniciAdi";
+            this.lblKullaniciAdi.Size = new System.Drawing.Size(67, 13);
+            this.lblKullaniciAdi.TabIndex = 0;
+            this.lblKullaniciAdi.Text = "Kullanıcı Adı:";
             // 
-            // label3
+            // lblAdSoyad
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Kullanıcı Adı:";
+            this.lblAdSoyad.AutoSize = true;
+            this.lblAdSoyad.Location = new System.Drawing.Point(6, 75);
+            this.lblAdSoyad.Name = "lblAdSoyad";
+            this.lblAdSoyad.Size = new System.Drawing.Size(56, 13);
+            this.lblAdSoyad.TabIndex = 0;
+            this.lblAdSoyad.Text = "Ad Soyad:";
             // 
-            // label4
+            // lblId
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Parola:";
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(6, 39);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(21, 13);
+            this.lblId.TabIndex = 0;
+            this.lblId.Text = "ID:";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgvKitaplar);
             this.groupBox2.Location = new System.Drawing.Point(350, 13);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(379, 218);
@@ -103,13 +103,17 @@ namespace Kutuphane07.UI
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ödünç Alınan Kitaplar";
             // 
-            // dataGridView1
+            // dgvKitaplar
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(366, 148);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKitaplar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKitaplar.Location = new System.Drawing.Point(6, 19);
+            this.dgvKitaplar.Name = "dgvKitaplar";
+            this.dgvKitaplar.RowHeadersVisible = false;
+            this.dgvKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKitaplar.Size = new System.Drawing.Size(366, 148);
+            this.dgvKitaplar.TabIndex = 0;
             // 
             // label5
             // 
@@ -127,32 +131,34 @@ namespace Kutuphane07.UI
             this.dateTimePicker1.Size = new System.Drawing.Size(170, 20);
             this.dateTimePicker1.TabIndex = 3;
             // 
-            // button1
+            // btnTeslimEt
             // 
-            this.button1.Location = new System.Drawing.Point(637, 193);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 20);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Kitap Teslim Et";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTeslimEt.Location = new System.Drawing.Point(637, 193);
+            this.btnTeslimEt.Name = "btnTeslimEt";
+            this.btnTeslimEt.Size = new System.Drawing.Size(86, 20);
+            this.btnTeslimEt.TabIndex = 4;
+            this.btnTeslimEt.Text = "Kitap Teslim Et";
+            this.btnTeslimEt.UseVisualStyleBackColor = true;
+            this.btnTeslimEt.Click += new System.EventHandler(this.btnTeslimEt_Click);
             // 
             // HesabimForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 239);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTeslimEt);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.Name = "HesabimForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HesabimForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKitaplar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,14 +167,14 @@ namespace Kutuphane07.UI
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblParola;
+        private System.Windows.Forms.Label lblKullaniciAdi;
+        private System.Windows.Forms.Label lblAdSoyad;
+        private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvKitaplar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTeslimEt;
     }
 }

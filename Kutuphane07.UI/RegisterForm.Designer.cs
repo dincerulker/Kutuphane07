@@ -119,6 +119,7 @@ namespace Kutuphane07.UI
             this.btnKayitOl.TabIndex = 2;
             this.btnKayitOl.Text = "Kayıt Ol";
             this.btnKayitOl.UseVisualStyleBackColor = true;
+            this.btnKayitOl.Click += new System.EventHandler(this.btnKayitOl_Click);
             // 
             // lblParolaKontrol
             // 
@@ -157,6 +158,7 @@ namespace Kutuphane07.UI
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "RegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "RegisterForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

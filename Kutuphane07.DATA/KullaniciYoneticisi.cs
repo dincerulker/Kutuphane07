@@ -8,6 +8,7 @@ namespace Kutuphane07.DATA
 {
     public class KullaniciYoneticisi
     {
+        public static readonly string path = Environment.CurrentDirectory.Replace("Kutuphane07.UI\\bin\\Debug", "") + "kullaniciveri.json";
         public KullaniciYoneticisi()
         {
             Kullanicilar = new List<Kullanici>()
@@ -21,9 +22,23 @@ namespace Kutuphane07.DATA
         
         public bool KayitOl(string adSoyad, string kullaniciAdi,string parola, string parolaTekrar)
         {
-            return true;
-            
+            if(parola == parolaTekrar)
+            {
+                Kullanicilar.Add(new Kullanici()
+                {
+                    AdSoyad = adSoyad,
+                    KullaniciAdi = kullaniciAdi,
+                    Parola = parola,
+                });
+                return true;
+            }
+            else
+            {
+                return false;
+            }          
+       
         }
+        
         public Kullanici GirisYap(string kullaniciAdi,string parola)
         {
 

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -18,9 +19,13 @@ namespace Kutuphane07.UI
         KullaniciYoneticisi kullaniciYoneticisi;
         public LoginForm()
         {
-            
+
             InitializeComponent();
-            kullaniciYoneticisi = new KullaniciYoneticisi();
+            //Debug.WriteLine("*****************");
+            //Debug.WriteLine(KullaniciYoneticisi.path);
+            //Debug.WriteLine("*****************");
+
+
         }
 
         private void btnGirisYap_Click(object sender, EventArgs e)
@@ -56,20 +61,16 @@ namespace Kutuphane07.UI
 
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            VerileriKaydet();
+            string json = JsonConvert.SerializeObject(kullaniciYoneticisi);
+            File.WriteAllText(KullaniciYoneticisi.path, json);
         }
 
-        private void VerileriKaydet()
-        {
-            string json = JsonConvert.SerializeObject(kullaniciYoneticisi);
-            File.WriteAllText("veri.json", json);
-        }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
             try
             {
-                string json = File.ReadAllText("veri.json");
+                string json = File.ReadAllText(KullaniciYoneticisi.path);
                 kullaniciYoneticisi = JsonConvert.DeserializeObject<KullaniciYoneticisi>(json);
             }
             catch (Exception)

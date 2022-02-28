@@ -19,5 +19,6 @@ namespace Kutuphane07.DATA
         public string YazarAd { get; set; }
         public int SayfaSayisi { get; set; }
         public string Aciklama { get; set; }
+        public DateTime? OduncAlinmaTarihi { get; set; }
     }
 }

@@ -46,7 +46,7 @@ namespace Kutuphane07.UI
             this.label1.Location = new System.Drawing.Point(30, 196);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 20);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 5;
             this.label1.Text = "Kullanıcı Adı:";
             // 
             // label2
@@ -56,7 +56,7 @@ namespace Kutuphane07.UI
             this.label2.Location = new System.Drawing.Point(30, 224);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 20);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Parola:";
             // 
             // txtKullaniciAdi
@@ -64,12 +64,13 @@ namespace Kutuphane07.UI
             this.txtKullaniciAdi.Location = new System.Drawing.Point(133, 198);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(125, 20);
-            this.txtKullaniciAdi.TabIndex = 2;
+            this.txtKullaniciAdi.TabIndex = 1;
             // 
             // txtParola
             // 
             this.txtParola.Location = new System.Drawing.Point(133, 224);
             this.txtParola.Name = "txtParola";
+            this.txtParola.PasswordChar = '*';
             this.txtParola.Size = new System.Drawing.Size(125, 20);
             this.txtParola.TabIndex = 2;
             // 
@@ -80,7 +81,7 @@ namespace Kutuphane07.UI
             this.lnklblKayitOl.Location = new System.Drawing.Point(30, 274);
             this.lnklblKayitOl.Name = "lnklblKayitOl";
             this.lnklblKayitOl.Size = new System.Drawing.Size(62, 20);
-            this.lnklblKayitOl.TabIndex = 3;
+            this.lnklblKayitOl.TabIndex = 4;
             this.lnklblKayitOl.TabStop = true;
             this.lnklblKayitOl.Text = "Kayıt Ol";
             this.lnklblKayitOl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblKayitOl_LinkClicked);
@@ -90,7 +91,7 @@ namespace Kutuphane07.UI
             this.btnGirisYap.Location = new System.Drawing.Point(183, 274);
             this.btnGirisYap.Name = "btnGirisYap";
             this.btnGirisYap.Size = new System.Drawing.Size(75, 23);
-            this.btnGirisYap.TabIndex = 4;
+            this.btnGirisYap.TabIndex = 3;
             this.btnGirisYap.Text = "GİRİŞ YAP";
             this.btnGirisYap.UseVisualStyleBackColor = true;
             this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
