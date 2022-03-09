@@ -49,6 +49,7 @@ namespace Kutuphane07.UI
             {
                 MessageBox.Show("Lütfen kullanıcı adı yada parolanızı giriniz!");
             }
+            txtParola.Text = "";
 
         }
 

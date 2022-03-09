@@ -35,18 +35,16 @@ namespace Kutuphane07.UI
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtYazar = new System.Windows.Forms.TextBox();
+            this.dtpBasimTarihi = new System.Windows.Forms.DateTimePicker();
+            this.cmbTur = new System.Windows.Forms.ComboBox();
+            this.nudSayfaSayisi = new System.Windows.Forms.NumericUpDown();
+            this.txtKitapAdi = new System.Windows.Forms.TextBox();
+            this.txtAciklama = new System.Windows.Forms.TextBox();
+            this.btnBagisYap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSayfaSayisi)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -104,89 +102,82 @@ namespace Kutuphane07.UI
             this.label5.TabIndex = 1;
             this.label5.Text = "Sayfa Sayısı:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 267);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Adet";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 294);
+            this.label7.Location = new System.Drawing.Point(10, 268);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "Açıklama";
             // 
-            // textBox2
+            // txtYazar
             // 
-            this.textBox2.Location = new System.Drawing.Point(106, 213);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtYazar.Location = new System.Drawing.Point(106, 213);
+            this.txtYazar.Name = "txtYazar";
+            this.txtYazar.Size = new System.Drawing.Size(171, 20);
+            this.txtYazar.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // dtpBasimTarihi
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(106, 160);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(171, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dtpBasimTarihi.Location = new System.Drawing.Point(106, 160);
+            this.dtpBasimTarihi.Name = "dtpBasimTarihi";
+            this.dtpBasimTarihi.Size = new System.Drawing.Size(171, 20);
+            this.dtpBasimTarihi.TabIndex = 3;
             // 
-            // comboBox1
+            // cmbTur
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(106, 186);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(171, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cmbTur.FormattingEnabled = true;
+            this.cmbTur.Location = new System.Drawing.Point(106, 186);
+            this.cmbTur.Name = "cmbTur";
+            this.cmbTur.Size = new System.Drawing.Size(171, 21);
+            this.cmbTur.TabIndex = 4;
             // 
-            // numericUpDown1
+            // nudSayfaSayisi
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(106, 239);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(171, 20);
-            this.numericUpDown1.TabIndex = 5;
+            this.nudSayfaSayisi.Location = new System.Drawing.Point(106, 239);
+            this.nudSayfaSayisi.Name = "nudSayfaSayisi";
+            this.nudSayfaSayisi.Size = new System.Drawing.Size(171, 20);
+            this.nudSayfaSayisi.TabIndex = 5;
             // 
-            // textBox3
+            // txtKitapAdi
             // 
-            this.textBox3.Location = new System.Drawing.Point(106, 134);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtKitapAdi.Location = new System.Drawing.Point(106, 134);
+            this.txtKitapAdi.Name = "txtKitapAdi";
+            this.txtKitapAdi.Size = new System.Drawing.Size(171, 20);
+            this.txtKitapAdi.TabIndex = 2;
             // 
-            // numericUpDown3
+            // txtAciklama
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(106, 265);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(171, 20);
-            this.numericUpDown3.TabIndex = 5;
+            this.txtAciklama.Location = new System.Drawing.Point(105, 265);
+            this.txtAciklama.Multiline = true;
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(171, 100);
+            this.txtAciklama.TabIndex = 2;
             // 
-            // textBox4
+            // btnBagisYap
             // 
-            this.textBox4.Location = new System.Drawing.Point(106, 291);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(171, 100);
-            this.textBox4.TabIndex = 2;
+            this.btnBagisYap.Location = new System.Drawing.Point(202, 371);
+            this.btnBagisYap.Name = "btnBagisYap";
+            this.btnBagisYap.Size = new System.Drawing.Size(75, 23);
+            this.btnBagisYap.TabIndex = 6;
+            this.btnBagisYap.Text = "Bağış Yap";
+            this.btnBagisYap.UseVisualStyleBackColor = true;
+            this.btnBagisYap.Click += new System.EventHandler(this.btnBagisYap_Click);
             // 
             // BagisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(288, 405);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnBagisYap);
+            this.Controls.Add(this.nudSayfaSayisi);
+            this.Controls.Add(this.cmbTur);
+            this.Controls.Add(this.dtpBasimTarihi);
+            this.Controls.Add(this.txtAciklama);
+            this.Controls.Add(this.txtKitapAdi);
+            this.Controls.Add(this.txtYazar);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -197,8 +188,7 @@ namespace Kutuphane07.UI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BagisForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSayfaSayisi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,14 +202,13 @@ namespace Kutuphane07.UI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtYazar;
+        private System.Windows.Forms.DateTimePicker dtpBasimTarihi;
+        private System.Windows.Forms.ComboBox cmbTur;
+        private System.Windows.Forms.NumericUpDown nudSayfaSayisi;
+        private System.Windows.Forms.TextBox txtKitapAdi;
+        private System.Windows.Forms.TextBox txtAciklama;
+        private System.Windows.Forms.Button btnBagisYap;
     }
 }

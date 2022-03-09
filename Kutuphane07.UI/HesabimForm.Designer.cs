@@ -37,7 +37,7 @@ namespace Kutuphane07.UI
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvKitaplar = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpTeslimTarihi = new System.Windows.Forms.DateTimePicker();
             this.btnTeslimEt = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -114,6 +114,7 @@ namespace Kutuphane07.UI
             this.dgvKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKitaplar.Size = new System.Drawing.Size(366, 148);
             this.dgvKitaplar.TabIndex = 0;
+            this.dgvKitaplar.SelectionChanged += new System.EventHandler(this.dgvKitaplar_SelectionChanged);
             // 
             // label5
             // 
@@ -124,12 +125,12 @@ namespace Kutuphane07.UI
             this.label5.TabIndex = 2;
             this.label5.Text = "Son Teslim Tarihi";
             // 
-            // dateTimePicker1
+            // dtpTeslimTarihi
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(448, 193);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(170, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dtpTeslimTarihi.Location = new System.Drawing.Point(448, 193);
+            this.dtpTeslimTarihi.Name = "dtpTeslimTarihi";
+            this.dtpTeslimTarihi.Size = new System.Drawing.Size(170, 20);
+            this.dtpTeslimTarihi.TabIndex = 3;
             // 
             // btnTeslimEt
             // 
@@ -147,7 +148,7 @@ namespace Kutuphane07.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 239);
             this.Controls.Add(this.btnTeslimEt);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpTeslimTarihi);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -174,7 +175,7 @@ namespace Kutuphane07.UI
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvKitaplar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpTeslimTarihi;
         private System.Windows.Forms.Button btnTeslimEt;
     }
 }

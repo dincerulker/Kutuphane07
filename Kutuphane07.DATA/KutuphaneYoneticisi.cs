@@ -13,34 +13,49 @@ namespace Kutuphane07.DATA
         {
             Kitaplar = new List<Kitap>()
             {
-                new Kitap()
-                {
-                    Aciklama = "Test",
-                    Ad = "Test",
-                    BasimTarihi = DateTime.Now,
-                    KitapTur = KitapTurEnum.Tarih,
-                    SayfaSayisi = 100,
-                    YazarAd = "Test"
-                }
+                //new Kitap()
+                //{
+                //    Aciklama = "Test",
+                //    Ad = "Test",
+                //    BasimTarihi = DateTime.Now,
+                //    KitapTur = KitapTurEnum.Tarih,
+                //    SayfaSayisi = 100,
+                //    YazarAd = "Test"
+                //}
             };
 
         }
         public List<Kitap> Kitaplar { get; set; }
         public void KitapBagisYap(string ad, DateTime basimTarihi, KitapTurEnum kitapTur, string yazarAd, int sayfaSayisi, string aciklama)
         {
-
+            Kitaplar.Add(new Kitap()
+            {
+                Ad = ad,
+                Aciklama = aciklama,
+                BasimTarihi = basimTarihi,
+                KitapTur = kitapTur,
+                YazarAd = yazarAd,
+                SayfaSayisi = sayfaSayisi,
+               
+            });
         }
         public void KitapImhaEt(Guid kitapId)
         {
-
+            Kitap imhaEdilecekKitap = Kitaplar.FirstOrDefault(x => x.Id == kitapId);
+            Kitaplar.Remove(imhaEdilecekKitap);
         }
         public void KitapOduncAl(Kullanici kullanici, Guid kitapId)
         {
-            // TODO kitabın ödünç alınma tarihini set ederiz ve kullanıcının odunc alınan kitaplarına ekleriz.
+            Kitap kitap = Kitaplar.FirstOrDefault(x => x.Id == kitapId);
+            kitap.OduncAlinmaTarihi = DateTime.Now;
+            kullanici.OduncAlinanKitaplar.Add(kitap);
+            //kitabın ödünç alınma tarihini set ederiz ve kullanıcının odunc alınan kitaplarına ekleriz.
         }
-        public void KitapTeslimEt()
+        public void KitapTeslimEt(Kullanici kullanici,Guid kitapId)
         {
-
+            Kitap kitap = Kitaplar.FirstOrDefault(x => x.Id == kitapId);
+            kitap.OduncAlinmaTarihi = null;
+            kullanici.OduncAlinanKitaplar.Remove(kitap);
         }
 
     }

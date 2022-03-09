@@ -39,7 +39,7 @@ namespace Kutuphane07.UI
             this.tsmiCıkısYap = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbTurler = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtArama = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvKitaplar = new System.Windows.Forms.DataGridView();
@@ -54,19 +54,19 @@ namespace Kutuphane07.UI
             this.tsmiKitapOduncAl,
             this.tsmiKitapImhaEt});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 48);
             // 
             // tsmiKitapOduncAl
             // 
             this.tsmiKitapOduncAl.Name = "tsmiKitapOduncAl";
-            this.tsmiKitapOduncAl.Size = new System.Drawing.Size(180, 22);
+            this.tsmiKitapOduncAl.Size = new System.Drawing.Size(154, 22);
             this.tsmiKitapOduncAl.Text = "Kitap Ödünç Al";
             this.tsmiKitapOduncAl.Click += new System.EventHandler(this.tsmiKitapOduncAl_Click);
             // 
             // tsmiKitapImhaEt
             // 
             this.tsmiKitapImhaEt.Name = "tsmiKitapImhaEt";
-            this.tsmiKitapImhaEt.Size = new System.Drawing.Size(180, 22);
+            this.tsmiKitapImhaEt.Size = new System.Drawing.Size(154, 22);
             this.tsmiKitapImhaEt.Text = "Kitap İmha Et";
             this.tsmiKitapImhaEt.Click += new System.EventHandler(this.tsmiKitapImhaEt_Click);
             // 
@@ -120,18 +120,20 @@ namespace Kutuphane07.UI
             this.cmbTurler.Name = "cmbTurler";
             this.cmbTurler.Size = new System.Drawing.Size(115, 21);
             this.cmbTurler.TabIndex = 3;
+            this.cmbTurler.SelectedIndexChanged += new System.EventHandler(this.cmbTurler_SelectedIndexChanged);
             // 
-            // textBox1
+            // txtArama
             // 
-            this.textBox1.Location = new System.Drawing.Point(302, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtArama.Location = new System.Drawing.Point(271, 25);
+            this.txtArama.Name = "txtArama";
+            this.txtArama.Size = new System.Drawing.Size(168, 20);
+            this.txtArama.TabIndex = 4;
+            this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(265, 28);
+            this.label2.Location = new System.Drawing.Point(234, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 2;
@@ -171,7 +173,7 @@ namespace Kutuphane07.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 470);
             this.Controls.Add(this.dgvKitaplar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtArama);
             this.Controls.Add(this.cmbTurler);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -183,6 +185,7 @@ namespace Kutuphane07.UI
             this.Name = "KutuphaneForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KutuphaneForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.KutuphaneForm_FormClosing);
             this.Load += new System.EventHandler(this.KutuphaneForm_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
@@ -204,7 +207,7 @@ namespace Kutuphane07.UI
         private System.Windows.Forms.ToolStripMenuItem tsmiCıkısYap;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbTurler;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtArama;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvKitaplar;

@@ -41,7 +41,7 @@
     - txt arama ve combobox turlerdeki seçim ve text deðiþtiðinde datagridviewde ilgili kitaplarýn listelenmesi.
 - [ ] HesabýmForm
     - HesabýmSayfasýnda giriþ yapan kullanýcý bilgileri gösterilir.
-- [ ] BagisYap Form
+- [X] BagisYap Form
     - BagisYap fromda ilgili kitap bilgileri alýnarak bir kitap kutuphanedeki kitaplara eklenir.
 - [ ] Çýkýþ Yap butonu
     - Kutuphane formu kapatarak loginforma geri döner ve baþka bir kullanýcý ile giriþ yapma imkaný saðlar.
